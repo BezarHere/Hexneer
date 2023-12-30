@@ -71,12 +71,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)libraries\Garter\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)libraries\Garter\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <IncludePath>$(ProjectDir)libraries\Garter\include;$(ProjectDir)libraries\Bite\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)libraries\Garter\lib;$(ProjectDir)libraries\Bite\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir)libraries\Garter\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)libraries\Garter\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <IncludePath>$(ProjectDir)libraries\Garter\include;$(ProjectDir)libraries\Bite\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)libraries\Garter\lib;$(ProjectDir)libraries\Bite\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="src\app.cpp" />
     <ClCompile Include="src\console.cpp" />
+    <ClCompile Include="src\edited_file.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
