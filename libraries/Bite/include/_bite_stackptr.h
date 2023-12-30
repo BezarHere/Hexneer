@@ -10,10 +10,10 @@ namespace bite
 	public:
 		using value_type = _T;
 		using buffer_type = int;
-		static constexpr size_t buffer_size = sizeof( value_type ) / sizeof( buffer_type ) + ( sizeof value_type % sizeof buffer_type != 0 );
+		static constexpr size_t buffer_size = sizeof( value_type ) / sizeof( buffer_type ) + (sizeof value_type % sizeof buffer_type != 0);
 
 		// will not allocate the ptr
-		inline stackptr(std::nullptr_t)
+		inline stackptr( std::nullptr_t )
 			: m_ptr{ nullptr } {
 		}
 
@@ -43,7 +43,8 @@ namespace bite
 
 		template <typename... _Valty>
 		inline value_type *allocate( _Valty &&... args ) {
-			return m_ptr = new(m_buf) value_type( args... );
+			m_ptr = reinterpret_cast<value_type *>(m_buf);
+			return new(m_ptr) value_type( args... );
 		}
 
 		// nullptr safe
