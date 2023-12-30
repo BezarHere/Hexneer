@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="src\app.h" />
     <ClInclude Include="src\console.h" />
+    <ClInclude Include="src\edited_file.h" />
     <ClInclude Include="src\gh.h" />
     <ClInclude Include="src\pch.h" />
   </ItemGroup>

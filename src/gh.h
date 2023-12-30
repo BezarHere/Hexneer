@@ -15,3 +15,10 @@ typedef uint64_t u64;
 typedef int64_t i64;
 
 constexpr const wchar_t *DefaultTitle = L"Hexneer";
+
+#ifdef UNICODE
+using filepath = std::wstring;
+#else
+using filepath = std::string;
+#endif // UNICODE
+
